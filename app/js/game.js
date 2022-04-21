@@ -21,7 +21,7 @@ $(document).keypress(function () {
 });
 
 function playSound(name) {
-  var audio = new Audio("/public/sounds/" + name + ".mp3");
+  var audio = new Audio("/app/public/sounds/" + name + ".mp3");
   audio.play();
 }
 
@@ -65,7 +65,7 @@ function checkAnswer(currentLevel) {
     setTimeout(function () {
       $("body").removeClass("game-over");
     }, 200);
-    var wrong = new Audio("/public/sounds/wrong.mp3");
+    var wrong = new Audio("/app/public/sounds/wrong.mp3");
     wrong.play();
   }
 }
