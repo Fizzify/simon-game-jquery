@@ -21,7 +21,7 @@ $(document).keypress(function () {
 });
 
 function playSound(name) {
-  var audio = new Audio("/assets/sounds/" + name + ".mp3");
+  var audio = new Audio("/public/sounds/" + name + ".mp3");
   audio.play();
 }
 
@@ -48,7 +48,10 @@ function animatePress(currentColour) {
 
 function checkAnswer(currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
-    console.log("correct");
+    $("#app-level").text("Correct!");
+    setTimeout(function () {
+      $("#app-level").text("Level " + level);
+    });
 
     if (userClickedPattern.length === gamePattern.length) {
       setTimeout(function () {
@@ -62,7 +65,7 @@ function checkAnswer(currentLevel) {
     setTimeout(function () {
       $("body").removeClass("game-over");
     }, 200);
-    var wrong = new Audio("/assets/sounds/wrong.mp3");
+    var wrong = new Audio("/public/sounds/wrong.mp3");
     wrong.play();
   }
 }
