@@ -51,7 +51,7 @@ function checkAnswer(currentLevel) {
     $("#app-level").text("Correct!");
     setTimeout(function () {
       $("#app-level").text("Level " + level);
-    }, 100);
+    }, 1000);
 
     if (userClickedPattern.length === gamePattern.length) {
       setTimeout(function () {
