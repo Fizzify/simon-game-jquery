@@ -5,10 +5,15 @@ body {
 }
 
 #app-level {
-  font-family: "Press Start 2P", cursive;
+  font-family: "Press Start 2P", monospace;
   font-size: 3rem;
   margin: 5%;
   color: white;
+}
+
+p {
+  font-family: "Press Start 2P", monospace;
+  color: rgb(150, 150, 150);
 }
 
 .app-container {
